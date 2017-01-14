@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="//chenqun.xyz/"/>
-  <updated>2017-01-14T16:59:48.622Z</updated>
+  <updated>2017-01-14T22:45:27.292Z</updated>
   <id>//chenqun.xyz/</id>
   
   <author>
@@ -14,6 +14,22 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo</title>
+    <link href="//chenqun.xyz/2017/01/15/hexo/"/>
+    <id>//chenqun.xyz/2017/01/15/hexo/</id>
+    <published>2017-01-14T22:45:27.000Z</published>
+    <updated>2017-01-14T22:45:27.292Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="星火" scheme="//chenqun.xyz/tags/%E6%98%9F%E7%81%AB/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>

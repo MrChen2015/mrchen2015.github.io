@@ -4,9 +4,9 @@
   <subtitle>星空微尘</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://github.chenqun.xyz/"/>
+  <link href="http://chenqun.xyz/"/>
   <updated>2017-01-14T16:59:48.622Z</updated>
-  <id>http://github.chenqun.xyz/</id>
+  <id>http://chenqun.xyz/</id>
   
   <author>
     <name>MrChen</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://github.chenqun.xyz/2017/01/15/hello-world/"/>
-    <id>http://github.chenqun.xyz/2017/01/15/hello-world/</id>
+    <link href="http://chenqun.xyz/2017/01/15/hello-world/"/>
+    <id>http://chenqun.xyz/2017/01/15/hello-world/</id>
     <published>2017-01-14T16:59:48.621Z</published>
     <updated>2017-01-14T16:59:48.622Z</updated>
     

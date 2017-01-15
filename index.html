@@ -196,117 +196,16 @@
 </code></pre><p>3.启动本地后台服务</p>
 <pre><code>hexo s
 </code></pre><blockquote>
-<p>默认为<a href="http://localhost:4000" target="_blank" rel="external">localhost:4000</a></p>
+<p>默认为<a href="http://localhost:4000">localhost:4000</a></p>
 </blockquote>
 <p>4.发布到github</p>
 <pre><code>hexo d
 </code></pre><p>5.清理生成的文件</p>
 <pre><code>hexo clean
-</code></pre><hr>
-<h1 id="二-安装"><a href="#二-安装" class="headerlink" title="二. 安装"></a>二. 安装</h1><p>我的博客地址(<a href="http://github.chenqun.xyz" target="_blank" rel="external">http://github.chenqun.xyz</a>) 大家可以先看下效果</p>
-<h2 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h2><blockquote>
-<p>1.git</p>
-<p>2.node.js</p>
-</blockquote>
-<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><blockquote>
-<p>1.环境搭建</p>
-<p>2.安装配置Hexo</p>
-<p>3.配置github仓库</p>
-<p>4.配置自己的网址（也叫域名）</p>
-<p>5.创建和发布文章</p>
-</blockquote>
-<h2 id="详情"><a href="#详情" class="headerlink" title="详情"></a>详情</h2><p>###第一步：环境搭建</p>
-<blockquote>
-<p>安装git （用来往github上传文章）</p>
-<p>安装Node.js（因为Hexo是基于Node.js开发的）</p>
-<p>###第二步：安装和配置Hexo</p>
-<p>####安装Hexo<br>上面的环境配置成功以后就可以使用npm安装Hexo了</p>
-</blockquote>
-<pre><code>npm install -g hexo-cli
-</code></pre><p>创建<strong>Hexo</strong>文件夹，用来存放博客文件,之后在hexo文件夹中空白处单击鼠标右键，选择 <strong>Git Bash Here</strong>命令<br>然后依次执行下面的命令</p>
-<pre><code>hexo init
-</code></pre><blockquote>
-<p>提示：最新版本已不需要再执行<strong><em>npm install</em></strong>，自动就会安装依赖</p>
-</blockquote>
-<p>安装成功后运行命令</p>
-<pre><code>hexo server
-</code></pre><p>启动本地这个Hexo服务，然后打开浏览器，输入<a href="http://localhost:4000" target="_blank" rel="external">localhost:4000</a> 出现下图，证明Hexo安装成功</p>
-<p>好的，显示的网站你可能看着不好看，现在我们更改一下主题</p>
-<pre><code>ctrl+c     //关闭server
-</code></pre><p>####安装新主题<br>我博客使用的主题是(<a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">https://github.com/litten/hexo-theme-yilia</a>)，打开终端窗口，输入以下命令，将目录切换到Hexo文件夹内的themes文件夹内</p>
-<pre><code>cd themes
-</code></pre><p>然后把这个主题从github网站上clone下来</p>
-<pre><code>git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia
-</code></pre><p>等待克隆完成，你会在themes文件夹下看到名为yilla的主题包，然后打开Hexo文件夹下面的_config.yml文件，修改里面的theme为yilia</p>
-<pre><code>theme: yilia
-</code></pre><p>重新打开server，浏览器输入<a href="http://localhost:4000" target="_blank" rel="external">localhost:4000</a> 是不是看到主题已经变了？</p>
-<p>好了，到此为止我们已经完成了本地Hexo的安装和配置。</p>
-<p>###第三步：配置github仓库</p>
-<p>####注册github账号<br><a href="https://github.com/" target="_blank" rel="external">github官网</a>，之后创建一个的放博客文章的仓库 仓库名为 <strong>你的github用户名.github.io</strong>必须是这个结构。</p>
-<p>####下面配置你的本地Hexo</p>
-<p>#####发布设置<br>打开Hexo目录下的_config.yml，将对应模块改为下面样子</p>
-<pre><code># Deployment
-## Docs: http://hexo.io/docs/deployment.html
-deploy:
-  type: git
-  repository: https://github.com/mrchen2015/mrchen2015.github.io.git
-  branch: master
-</code></pre><blockquote>
-<p>1.只需要把codertian改为你自己的github用户名就可以了。</p>
-<p>2.配置时大家要注意<strong>空格</strong></p>
-</blockquote>
-<p>保存，cd到Hexo的根目录<br>依次执行下面的命令</p>
-<pre><code>hexo clean
-hexo g
-hexo d
-</code></pre><blockquote>
-<p>第一次上传可能会让你输入git的用户名和密码</p>
-</blockquote>
-<p>如果成功的话在浏览器输入(<a href="http://mrchen2015.github.io" target="_blank" rel="external">http://mrchen2015.github.io</a>) 就可以访问你的博客了。把用户名换为你自己的。</p>
-<blockquote>
-<p>如果发布的时候出现错误：ERROR Deployer not found: git 意思就是用来发布文章的git没有安装，执行命令 </p>
-</blockquote>
-<pre><code>npm install hexo-deployer-git --save
-</code></pre><p>就可以解决了。</p>
-<p>好了，到这里为止，你已经完成了本地博客的创建。</p>
-<p>###第四步：（可选）配置自己博客的网址(也叫域名)</p>
-<p>####购买自己的域名</p>
-<p>首先去<a href="http://wanwang.aliyun.com" target="_blank" rel="external">万网</a> 购买自己的域名，比如我购买的是（chenqun.xyz）</p>
-<p>####域名解析<br>万网中可进行设置，选择要绑定的域名，添加一条解析 内容依次为 类型为</p>
-<blockquote>
-<p>CNAME<br>github   //内容自定义<br>mrchen2015@github.io  //内容自定义  </p>
-</blockquote>
-<p>####创建CNAME文件</p>
-<p>#####方法1.直接的方法<br>可以直接新建名为CNAME文件（无后缀如.txt）,内容为新加解析地址如 github.chenqun.xyz</p>
-<p>#####方法2.复杂的方法<br>然后去github，点击进去你创建的那个博客仓库(用户名.github.io)点击create a new file here<br>名字为<strong>CNAME</strong>，内容为你自己申请的域名，如 github.chenqun.xyz，然后提交，来到仓库的右边点击Download zip按钮，下载下来这个仓库，里面的有CNAME文件</p>
-<p>#####最终，将CNAME文件放到Hexo文件的Source目录下，之后就等你的域名解析生效后（时间不定快的几分钟就可以了），就可以在浏览器里面输入你自己的域名访问的博客了。</p>
-<p>###第五步：创建和发布文章</p>
-<p>####发布新的文章<br>在Hexo文件夹下执行命令</p>
-<pre><code>hexo new &quot;文章标题&quot;
-</code></pre><p>你可以在Hexo-&gt;Source-&gt;_post目录下看到你新创建的那个文章 <strong>文章名.md</strong>，<a href="http://www.appinn.com/markdown/#code" target="_blank" rel="external">markdown具体语法参考</a></p>
-<p>#####发布文章<br>修改md文件内容后，直接执行命令</p>
-<pre><code>hexo d -g
-</code></pre><p>即可直接发布文章。</p>
-<blockquote>
-<p>如果发布时候出现错误ERROR Deployer not found: git，执行</p>
-</blockquote>
-<pre><code>npm install hexo-deployer-git --save
-</code></pre><p>#####文章图片的插入<br>文章插入图片需要用到Hexo的一个插件，首先cd到hexo的根目录</p>
-<pre><code>npm install https://github.com/CodeFalling/hexo-asset-image --save
-</code></pre><p>然后把图片放入对应文章的配套文件夹下</p>
-<hr>
-<h1 id="三-插件"><a href="#三-插件" class="headerlink" title="三. 插件"></a>三. 插件</h1><hr>
-<h1 id="四-Q-amp-A"><a href="#四-Q-amp-A" class="headerlink" title="四. Q&amp;A"></a>四. Q&amp;A</h1><h3 id="1-Plugin-load-failed-hexo-generator-json-content-Uncaught-SyntaxError-Block-scoped-declarations-let-const-function-class-not-yet-supported-outside-strict-mode"><a href="#1-Plugin-load-failed-hexo-generator-json-content-Uncaught-SyntaxError-Block-scoped-declarations-let-const-function-class-not-yet-supported-outside-strict-mode" class="headerlink" title="1.Plugin load failed: hexo-generator-json-content Uncaught SyntaxError: Block-scoped declarations (let, const, function, class) not yet supported outside strict mode"></a>1.Plugin load failed: hexo-generator-json-content Uncaught SyntaxError: Block-scoped declarations (let, const, function, class) not yet supported outside strict mode</h3><h4 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h4><blockquote>
-<p>安装hexo-generator-json-content插件后，运行g/s/d命令都会弹出</p>
-</blockquote>
-<h4 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h4><blockquote>
-<p>插件本身的问题，node_nodules对应文件夹下index.js文件使用es6语法，但浏览器还无法直接执行，需要进行转换为es5</p>
-</blockquote>
-<h4 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h4><blockquote>
-<p>在文件头部添加语句</p>
-</blockquote>
-<pre><code>&apos;use strict&apos;;
-</code></pre>
+</code></pre><h2 id=""><a href="#" class="headerlink" title=""></a>
+        
+          <a class="article-more-a" href="2017/01/15/hexo/#more">more >></a>
+        
       
 
       
@@ -320,6 +219,10 @@ hexo d
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">星火</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hoxe</a>
         		</li>
       		
 		</ul>
@@ -500,6 +403,10 @@ hexo d
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">星火</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hoxe</a>
               </li>
             
             <div class="clearfix"></div>
